@@ -1,0 +1,5 @@
+node_modules/
+/opencode.json
+/opencode.jsonc
+__pycache__/
+*.py[cod]
