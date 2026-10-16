@@ -82,8 +82,6 @@ The viewer supports arrow keys, `j`/`k`, Page Up/Down, Home/End, and mouse-wheel
 
 **Import/export paths are resolved on the OpenCode server.** Relative paths are based on the current project directory, and `~/` refers to the server user's home directory. If your TUI connects to a remote server, the files must be accessible on that server.
 
-
-
 ## Agent Integration
 
 SourcePier registers two agent tools:
@@ -120,7 +118,7 @@ The canonical Sources are **not** a mirrored folder, a Git-backed document repos
 
 SourcePier uses TypeScript, Bun, OpenTUI, and the OpenCode v2 Plugin API.
 
-The Server Plugin ID and RPC ID are `sourcepier`; the native TUI Plugin ID is `sourcepier.tui`. The `/sources` command and the agent tool names remain unchanged. As a pre-release rename, this changes the internal Plugin Storage namespace: development-only data stored under the earlier `opencode-sources` Plugin ID is not automatically migrated.
+The Server Plugin ID and RPC ID are `sourcepier`; the native TUI Plugin ID is `sourcepier.tui`.
 
 ```sh
 npm ci --ignore-scripts
@@ -142,7 +140,7 @@ The `tests/runtime/` directory contains isolated OpenCode runtime verification h
 
 ## Contributing
 
-The project is currently in pre-release. Contribution guidelines and a public issue/PR workflow will be finalized when the repository is opened to the public.
+Contributions are welcome! Please open an issue to discuss bugs, feature requests, or proposed changes before submitting a pull request.
 
 ## License
 
