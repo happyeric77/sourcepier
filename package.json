@@ -1,6 +1,6 @@
 {
   "name": "sourcepier",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "type": "module",
   "main": "./src/index.ts",
@@ -19,8 +19,8 @@
     "seroval": "1.6.9"
   },
   "devDependencies": {
-    "@opentui/core": "0.5.17",
-    "@opentui/solid": "0.5.17",
+    "@opentui/core": "0.6.6",
+    "@opentui/solid": "0.6.6",
     "@types/bun": "^1.4.3",
     "@types/node": "^22.15.0",
     "solid-js": "1.9.12",

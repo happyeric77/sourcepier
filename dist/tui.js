@@ -292,8 +292,8 @@ function SourceViewer(props) {
     "markup.raw": {
       fg: context.theme.text.muted
     }
-  });
-  onCleanup(() => syntaxStyle.destroy());
+  }, context.renderer.nativeScene);
+  onCleanup(() => context.renderer.idle().then(() => syntaxStyle.destroy()));
   let scroll;
   onCleanup(props.gone);
   context.keymap.layer(() => ({

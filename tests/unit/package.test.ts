@@ -56,6 +56,8 @@ test("distributed TUI is current compiled OpenTUI code, not host-transformed TSX
   expect(tui).toContain('from "@opentui/solid"')
   expect(tui).not.toContain('from "react"')
   expect(tui).not.toContain("jsx-runtime")
+  expect(tui).toMatch(/SyntaxStyle\.fromStyles\([\s\S]*?},\s*context\.renderer\.nativeScene\)/)
+  expect(tui).toContain("context.renderer.idle().then(() => syntaxStyle.destroy())")
 })
 
 

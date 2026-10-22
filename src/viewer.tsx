@@ -38,14 +38,17 @@ function SourceViewer(props: {
       setModal(false)
     }
   }
-  const syntaxStyle = SyntaxStyle.fromStyles({
-    default: { fg: context.theme.text.base },
-    "markup.heading": { fg: context.theme.text.base, bold: true },
-    "markup.strong": { bold: true },
-    "markup.italic": { italic: true },
-    "markup.raw": { fg: context.theme.text.muted },
-  })
-  onCleanup(() => syntaxStyle.destroy())
+  const syntaxStyle = SyntaxStyle.fromStyles(
+    {
+      default: { fg: context.theme.text.base },
+      "markup.heading": { fg: context.theme.text.base, bold: true },
+      "markup.strong": { bold: true },
+      "markup.italic": { italic: true },
+      "markup.raw": { fg: context.theme.text.muted },
+    },
+    context.renderer.nativeScene,
+  )
+  onCleanup(() => context.renderer.idle().then(() => syntaxStyle.destroy()))
   let scroll: ScrollBoxRenderable | undefined
   onCleanup(props.gone)
 
